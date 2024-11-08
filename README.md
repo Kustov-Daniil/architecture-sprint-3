@@ -383,8 +383,6 @@ ER-диаграмма - 5_TOBE_ER.puml
 
 
 
-
-
 ### 3. Описание контрактов API и примеры
 
 #### Пример контракта API: Device Management Service
@@ -394,28 +392,29 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Описание**: Добавить новое устройство.
     -   **Тело запроса**:
         
-       ```json
-        `{
+      	```json
+        {
           "serial_number": "ABC123456",
           "type_id": "thermostat",
           "house_id": "house123",
           "status": "offline"
-        }` 
-	   ```
-    -   **Ответы**:
+        } 
+	```
+ 
+-   **Ответы**:
         -   **201 Created**:
             
-            ```json
-            `{
-              "id": "device123",
-              "serial_number": "ABC123456",
-              "status": "offline",
-              "type_id": "thermostat",
-              "house_id": "house123"
-            }`  
-            ```
+	```json
+ 	{
+	"id": "device123",
+ 	"serial_number": "ABC123456",
+	"status": "offline",
+	"type_id": "thermostat",
+	"house_id": "house123"
+	}
+ 	```
        
-        -   **400 Bad Request**: Ошибка валидации данных.
+  	-   **400 Bad Request**: Ошибка валидации данных.
 
 -   **Метод**:  `PATCH /devices/{deviceId}/status`
     

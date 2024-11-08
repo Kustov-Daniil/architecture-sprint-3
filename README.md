@@ -280,24 +280,24 @@ ER-диаграмма - 5_TOBE_ER.puml
     
     -   **Запрос**:
 
-		```json
-			{
-			  "name": "John Doe",
-			  "email": "john.doe@example.com",
-			  "password": "securePassword123"
-		        }
-		```    
+	```json
+	{
+		"name": "John Doe",
+		"email": "john.doe@example.com",
+		"password": "securePassword123"
+	}
+	```    
    
 	   -   **Ответы**:
 	        -   **201 Created**: Пользователь успешно создан.
 
-			```json
-				{
-			          "id": "123e4567-e89b-12d3-a456-426614174000",
-			 	  "name": "John Doe",
-			          "email": "john.doe@example.com"
-		           	}
-		 	```
+	```json
+	{
+		"id": "123e4567-e89b-12d3-a456-426614174000",
+		"name": "John Doe",
+		"email": "john.doe@example.com"
+	}
+	``` 
  
 	        -   **400 Bad Request**: Ошибка валидации данных.
 
@@ -306,13 +306,13 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Ответы**:
         -   **200 OK**: Успешное получение данных.
             
-            ```json
-			{
-			  "id": "123e4567-e89b-12d3-a456-426614174000",
-			  "name": "John Doe",
-	        	  "email": "john.doe@example.com"
-		     	}
-            ```  
+	```json
+	{
+		"id": "123e4567-e89b-12d3-a456-426614174000",
+		"name": "John Doe",
+	        "email": "john.doe@example.com"
+	}
+	``` 
         -   **404 Not Found**: Пользователь не найден.
 
 
@@ -325,36 +325,36 @@ ER-диаграмма - 5_TOBE_ER.puml
     
     -   **Запрос**:
         
-        ```json
-	        {
+	```json
+	{
 	       	  "serial_number": "ABC123456",
 	       	  "type_id": "thermostat",
 	       	  "house_id": "house123",
 	       	  "status": "offline"
-	        }
-        ``` 
+	}
+	``` 
 				
     -   **Ответы**:
         -   **201 Created**: Устройство успешно добавлено.
-            
-            ```json
-	           {
-	             "id": "device123",
-	             "serial_number": "ABC123456",
-	             "status": "offline",
-	             "type_id": "thermostat",
-	             "house_id": "house123"
-	           } 
-            ```
+
+	```json
+	{	           {
+	        "id": "device123",
+	        "serial_number": "ABC123456",
+	        "status": "offline",
+	        "type_id": "thermostat",
+		"house_id": "house123"
+	}
+	``` 
 -   **PATCH /devices/{deviceId}/status**  — обновить статус устройства (включено/выключено)
     
     -   **Запрос**:
 
-      ```json
+	```json
 	{
 		"status": "online"
 	}
-	```
+	``` 
     -   **Ответы**:
         -   **200 OK**: Устройство успешно обновлено.
         -   **404 Not Found**: Устройство не найдено.
@@ -377,7 +377,7 @@ ER-диаграмма - 5_TOBE_ER.puml
 		"timestamp": "2023-01-01T12:00:00Z",
 		"temperature": 22.5
 	}
-	```
+	``` 
     -   **Ответы**:
         
         -   При успешной обработке данных система отправляет уведомление об успешной записи данных для аналитики.
@@ -393,27 +393,27 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Описание**: Добавить новое устройство.
     -   **Тело запроса**:
         
-      	```json
-		{
-			"serial_number": "ABC123456",
-			"type_id": "thermostat",
-			"house_id": "house123",
-			"status": "offline"
-		} 
-	```
+	```json
+	{
+		"serial_number": "ABC123456",
+		"type_id": "thermostat",
+		"house_id": "house123",
+		"status": "offline"
+	}
+	``` 
  
 -   **Ответы**:
         -   **201 Created**:
             
 	```json
-		{
-			"id": "device123",
-			"serial_number": "ABC123456",
-			"status": "offline",
-			"type_id": "thermostat",
-			"house_id": "house123"
-		}
- 	```
+	{
+		"id": "device123",
+		"serial_number": "ABC123456",
+		"status": "offline",
+		"type_id": "thermostat",
+		"house_id": "house123"
+	}
+	```  
        
   	-   **400 Bad Request**: Ошибка валидации данных.
 
@@ -422,19 +422,19 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Описание**: Обновить статус устройства.
     -   **Тело запроса**:
         
-        ```json
-	        {
-	          "status": "online"
-	        }
-        ```        
+	```json
+	{
+		"status": "online"
+	}
+	```         
     -   **Ответы**:
         -   **200 OK**:
             
 	```json
-		{
-		  "id": "device123",
-		  "status": "online"
-		}
+	{
+ 		"id": "device123",
+		"status": "online"
+	}
 	```     
         
 	-   **404 Not Found**: Устройство не найдено.

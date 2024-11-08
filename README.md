@@ -395,25 +395,25 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Тело запроса**:
         
        ```json
-        `{
+        {
           "serial_number": "ABC123456",
           "type_id": "thermostat",
           "house_id": "house123",
           "status": "offline"
-        }` 
+        } 
 	   ```
     -   **Ответы**:
         -   **201 Created**:
             
-            ```json
-            `{
+        ```json
+            {
               "id": "device123",
               "serial_number": "ABC123456",
               "status": "offline",
               "type_id": "thermostat",
               "house_id": "house123"
-            }`  
-            ```
+            }  
+        ```
        
         -   **400 Bad Request**: Ошибка валидации данных.
 
@@ -423,19 +423,19 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Тело запроса**:
         
         ```json
-        `{
+        {
           "status": "online"
-        }` 
-            ```        
+        } 
+        ```        
     -   **Ответы**:
         -   **200 OK**:
             
-           ```json
-            `{
-              "id": "device123",
-              "status": "online"
-            }` 
-           ```     
+        ```json
+        {
+          "id": "device123",
+          "status": "online"
+        }
+        ```     
         
         -   **404 Not Found**: Устройство не найдено.
 

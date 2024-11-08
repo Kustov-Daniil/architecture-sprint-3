@@ -372,11 +372,11 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Payload**:
         
         ```json
-	        {
-	       	  "device_id": "device123",
+		{
+	          "device_id": "device123",
 	       	  "timestamp": "2023-01-01T12:00:00Z",
 	       	  "temperature": 22.5
-	        }
+        	}
         ```
     -   **Ответы**:
         

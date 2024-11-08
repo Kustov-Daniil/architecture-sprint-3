@@ -147,11 +147,11 @@ C4 - Уровень контекста (Context) - 1_Monolith_Context_Diagram.pu
 
 ## 3. Визуализация архитектуры:
 
-*   C4 — Уровень контейнеров (Containers) - 2_TOBE_Container.puml
-*   C4 — Уровень компонентов (Components) - 3_TOBE_Components.puml
+*   C4 — Уровень контейнеров (Containers) - /C4/2_TOBE_Container.puml
+*   C4 — Уровень компонентов (Components) - /C4/3_TOBE_Components.puml
 
         Пример диаграммы Components для сервиса Device Management Service 
-*   C4 — Уровень кода (Code) - 4_TOBE_Code.puml
+*   C4 — Уровень кода (Code) - /C4/4_TOBE_Code.puml
 
         Пример диаграммы Code для сценария добавления нового устройства.
 
@@ -250,7 +250,7 @@ C4 - Уровень контекста (Context) - 1_Monolith_Context_Diagram.pu
 
 ## 4. ER-диаграмма на PlantUML
 
-ER-диаграмма - 5_TOBE_ER.puml
+ER-диаграмма - /C4/5_TOBE_ER.puml
 
 
 ----------
@@ -282,24 +282,25 @@ ER-диаграмма - 5_TOBE_ER.puml
 
 	```json
 	{
-		"name": "John Doe",
-		"email": "john.doe@example.com",
-		"password": "securePassword123"
+		"name": "Daniil Kustov",
+		"email": "DaniilKustov@gmail.com",
+		"password": "password"
 	}
 	```    
    
 	   -   **Ответы**:
 	        -   **201 Created**: Пользователь успешно создан.
-
+ 
 	```json
 	{
 		"id": "123e4567-e89b-12d3-a456-426614174000",
-		"name": "John Doe",
-		"email": "john.doe@example.com"
+		"name": "Daniil Kustov",
+		"email": "DaniilKustov@gmail.com"
 	}
-	``` 
- 
-	        -   **400 Bad Request**: Ошибка валидации данных.
+	```
+	   -   **400 Bad Request**: Ошибка валидации данных.
+
+
 
 -   **GET /users/{userId}**  — получить данные пользователя по ID
     
@@ -309,11 +310,11 @@ ER-диаграмма - 5_TOBE_ER.puml
 	```json
 	{
 		"id": "123e4567-e89b-12d3-a456-426614174000",
-		"name": "John Doe",
-	        "email": "john.doe@example.com"
+		"name": "Daniil Kustov",
+	        "email": "DaniilKustov@gmail.com"
 	}
 	``` 
-        -   **404 Not Found**: Пользователь не найден.
+   -   **404 Not Found**: Пользователь не найден.
 
 
 

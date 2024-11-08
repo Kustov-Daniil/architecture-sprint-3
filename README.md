@@ -280,13 +280,13 @@ ER-диаграмма - 5_TOBE_ER.puml
     
     -   **Запрос**:
 
-	```json
-		{
-	          "name": "John Doe",
-	          "email": "john.doe@example.com",
-	          "password": "securePassword123"
-	        }
-	```    
+		```json
+			{
+		          "name": "John Doe",
+		          "email": "john.doe@example.com",
+		          "password": "securePassword123"
+		        }
+		```    
    
 	   -   **Ответы**:
 	        -   **201 Created**: Пользователь успешно создан.
@@ -307,11 +307,11 @@ ER-диаграмма - 5_TOBE_ER.puml
         -   **200 OK**: Успешное получение данных.
             
             ```json
-            `{
-              "id": "123e4567-e89b-12d3-a456-426614174000",
-              "name": "John Doe",
-              "email": "john.doe@example.com"
-            }` 
+	            {
+	              "id": "123e4567-e89b-12d3-a456-426614174000",
+	              "name": "John Doe",
+	              "email": "john.doe@example.com"
+	            }
             ```  
         -   **404 Not Found**: Пользователь не найден.
 
@@ -326,35 +326,35 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Запрос**:
         
         ```json
-        `{
-          "serial_number": "ABC123456",
-          "type_id": "thermostat",
-          "house_id": "house123",
-          "status": "offline"
-        }` 
-	    ``` 
+	        {
+	          "serial_number": "ABC123456",
+	          "type_id": "thermostat",
+	          "house_id": "house123",
+	          "status": "offline"
+	        }
+        ``` 
 				
     -   **Ответы**:
         -   **201 Created**: Устройство успешно добавлено.
             
             ```json
-            `{
-              "id": "device123",
-              "serial_number": "ABC123456",
-              "status": "offline",
-              "type_id": "thermostat",
-              "house_id": "house123"
-            }` 
+	            {
+	              "id": "device123",
+	              "serial_number": "ABC123456",
+	              "status": "offline",
+	              "type_id": "thermostat",
+	              "house_id": "house123"
+	            } 
             ```
 -   **PATCH /devices/{deviceId}/status**  — обновить статус устройства (включено/выключено)
     
     -   **Запрос**:
         
-        ```json
-        `{
-          "status": "online"
-        }` 
-        ```
+	        ```json
+		        {
+		          "status": "online"
+		        }
+	        ```
     -   **Ответы**:
         -   **200 OK**: Устройство успешно обновлено.
         -   **404 Not Found**: Устройство не найдено.
@@ -372,11 +372,11 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Payload**:
         
         ```json
-        `{
-          "device_id": "device123",
-          "timestamp": "2023-01-01T12:00:00Z",
-          "temperature": 22.5
-        }` 
+	        {
+	          "device_id": "device123",
+	          "timestamp": "2023-01-01T12:00:00Z",
+	          "temperature": 22.5
+	        }
         ```
     -   **Ответы**:
         
@@ -394,25 +394,25 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Тело запроса**:
         
       	```json
-        {
-          "serial_number": "ABC123456",
-          "type_id": "thermostat",
-          "house_id": "house123",
-          "status": "offline"
-        } 
+	        {
+	          "serial_number": "ABC123456",
+	          "type_id": "thermostat",
+	          "house_id": "house123",
+	          "status": "offline"
+	        } 
 	```
  
 -   **Ответы**:
         -   **201 Created**:
             
 	```json
- 	{
-	"id": "device123",
- 	"serial_number": "ABC123456",
-	"status": "offline",
-	"type_id": "thermostat",
-	"house_id": "house123"
-	}
+	 	{
+		"id": "device123",
+	 	"serial_number": "ABC123456",
+		"status": "offline",
+		"type_id": "thermostat",
+		"house_id": "house123"
+		}
  	```
        
   	-   **400 Bad Request**: Ошибка валидации данных.
@@ -423,10 +423,10 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Тело запроса**:
         
         ```json
-        `{
-          "status": "online"
-        }` 
-            ```        
+	        {
+	          "status": "online"
+	        }
+        ```        
     -   **Ответы**:
         -   **200 OK**:
             

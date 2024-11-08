@@ -447,3 +447,6 @@ ER-диаграмма - /C4/5_TOBE_ER.puml
 1.  **User Service**  (сервис управления пользователями) - /API/UserService.yaml
 2.  **Device Management Service**  (сервис управления устройствами) - /API/DeviceManagementSystem.yaml
 3.  **Telemetry Service**  (сервис сбора телеметрии) - /API/TelemetryService.yaml
+
+
+Конец задания

@@ -394,24 +394,24 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Тело запроса**:
         
       	```json
-	        {
-		  "serial_number": "ABC123456",
-		  "type_id": "thermostat",
-		  "house_id": "house123",
-		  "status": "offline"
-	        } 
+		{
+			"serial_number": "ABC123456",
+			"type_id": "thermostat",
+			"house_id": "house123",
+			"status": "offline"
+		} 
 	```
  
 -   **Ответы**:
         -   **201 Created**:
             
 	```json
-	 	{
-		  "id": "device123",
-		  "serial_number": "ABC123456",
-		  "status": "offline",
-		  "type_id": "thermostat",
-		  "house_id": "house123"
+		{
+			"id": "device123",
+			"serial_number": "ABC123456",
+			"status": "offline",
+			"type_id": "thermostat",
+			"house_id": "house123"
 		}
  	```
        

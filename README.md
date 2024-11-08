@@ -279,26 +279,27 @@ ER-диаграмма - 5_TOBE_ER.puml
 -   **POST /users**  — создать нового пользователя
     
     -   **Запрос**:
-        
-	```json        
-	        `{
+
+	```json
+		{
 	          "name": "John Doe",
 	          "email": "john.doe@example.com",
 	          "password": "securePassword123"
-	        }` 
-	 ``` 
+	        }
+	```    
    
 	   -   **Ответы**:
 	        -   **201 Created**: Пользователь успешно создан.
-            
-           ```json
-           `{
+
+	```json
+		{
               "id": "123e4567-e89b-12d3-a456-426614174000",
               "name": "John Doe",
               "email": "john.doe@example.com"
-            }` 
-      ```   
-           -   **400 Bad Request**: Ошибка валидации данных.
+           	}
+	```    	    
+
+	        -   **400 Bad Request**: Ошибка валидации данных.
 
 -   **GET /users/{userId}**  — получить данные пользователя по ID
     

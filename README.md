@@ -429,12 +429,12 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Ответы**:
         -   **200 OK**:
             
-	```json
-            {
-              "id": "device123",
-              "status": "online"
-            }
-	```     
+```json
+`{
+"id": "device123",
+"status": "online"
+}`
+```     
         
 	-   **404 Not Found**: Устройство не найдено.
 

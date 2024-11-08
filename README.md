@@ -278,7 +278,7 @@ ER-диаграмма - /C4/5_TOBE_ER.puml
 
 -   **POST /users**  — создать нового пользователя
     
-    -   **Запрос**:
+	-   **Запрос**:
 
 	```json
 	{
@@ -287,34 +287,34 @@ ER-диаграмма - /C4/5_TOBE_ER.puml
 		"password": "password"
 	}
 	```    
-   
-	   -   **Ответы**:
-	        -   **201 Created**: Пользователь успешно создан.
+	-   **Ответы**:
+		-   **201 Created**: Пользователь успешно создан.
  
-	```json
-	{
-		"id": "123e4567-e89b-12d3-a456-426614174000",
-		"name": "Daniil Kustov",
-		"email": "DaniilKustov@gmail.com"
-	}
-	```
-	   -   **400 Bad Request**: Ошибка валидации данных.
+		```json
+		{
+			"id": "123e4567-e89b-12d3-a456-426614174000",
+			"name": "Daniil Kustov",
+			"email": "DaniilKustov@gmail.com"
+		}
+		```
+
+   		-   **400 Bad Request**: Ошибка валидации данных.
 
 
 
 -   **GET /users/{userId}**  — получить данные пользователя по ID
     
-    -   **Ответы**:
-        -   **200 OK**: Успешное получение данных.
-            
-	```json
-	{
-		"id": "123e4567-e89b-12d3-a456-426614174000",
-		"name": "Daniil Kustov",
-	        "email": "DaniilKustov@gmail.com"
-	}
-	``` 
-   -   **404 Not Found**: Пользователь не найден.
+	-   **Ответы**:
+	        -   **200 OK**: Успешное получение данных.
+	            
+		```json
+		{
+			"id": "123e4567-e89b-12d3-a456-426614174000",
+			"name": "Daniil Kustov",
+		        "email": "DaniilKustov@gmail.com"
+		}
+		``` 
+		-   **404 Not Found**: Пользователь не найден.
 
 
 
@@ -324,7 +324,7 @@ ER-диаграмма - /C4/5_TOBE_ER.puml
 
 -   **POST /devices**  — добавить новое устройство
     
-    -   **Запрос**:
+	-   **Запрос**:
         
 	```json
 	{
@@ -335,31 +335,31 @@ ER-диаграмма - /C4/5_TOBE_ER.puml
 	}
 	``` 
 				
-    -   **Ответы**:
-        -   **201 Created**: Устройство успешно добавлено.
+	-   **Ответы**:
+        	-   **201 Created**: Устройство успешно добавлено.
 
-	```json
-	{	           {
-	        "id": "device123",
-	        "serial_number": "ABC123456",
-	        "status": "offline",
-	        "type_id": "thermostat",
-		"house_id": "house123"
-	}
-	``` 
+		```json
+		{	           {
+		        "id": "device123",
+		        "serial_number": "ABC123456",
+		        "status": "offline",
+		        "type_id": "thermostat",
+			"house_id": "house123"
+		}
+		``` 
 -   **PATCH /devices/{deviceId}/status**  — обновить статус устройства (включено/выключено)
     
-    -   **Запрос**:
+	-   **Запрос**:
 
 	```json
 	{
 		"status": "online"
 	}
 	``` 
-    -   **Ответы**:
-        -   **200 OK**: Устройство успешно обновлено.
-        -   **404 Not Found**: Устройство не найдено.
-        -   **500 Internal Server Error**: Ошибка сервера.
+	-   **Ответы**:
+	        -   **200 OK**: Устройство успешно обновлено.
+	        -   **404 Not Found**: Устройство не найдено.
+   		-   **500 Internal Server Error**: Ошибка сервера.
 
 
 

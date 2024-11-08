@@ -291,14 +291,14 @@ ER-диаграмма - 5_TOBE_ER.puml
 	   -   **Ответы**:
 	        -   **201 Created**: Пользователь успешно создан.
 
-	```json
-		{
-              "id": "123e4567-e89b-12d3-a456-426614174000",
-              "name": "John Doe",
-              "email": "john.doe@example.com"
-           	}
-	```    	    
-
+			```json
+				{
+		              "id": "123e4567-e89b-12d3-a456-426614174000",
+		              "name": "John Doe",
+		              "email": "john.doe@example.com"
+		           	}
+		 	```
+ 
 	        -   **400 Bad Request**: Ошибка валидации данных.
 
 -   **GET /users/{userId}**  — получить данные пользователя по ID

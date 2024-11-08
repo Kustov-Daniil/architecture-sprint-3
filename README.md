@@ -147,11 +147,11 @@ C4 - Уровень контекста (Context) - 1_Monolith_Context_Diagram.pu
 
 ## 3. Визуализация архитектуры:
 
-*   C4 — Уровень контейнеров (Containers) - 2_TOBE_Container.puml
-*   C4 — Уровень компонентов (Components) - 3_TOBE_Components.puml
+*   C4 — Уровень контейнеров (Containers) - /C4/2_TOBE_Container.puml
+*   C4 — Уровень компонентов (Components) - /C4/3_TOBE_Components.puml
 
         Пример диаграммы Components для сервиса Device Management Service 
-*   C4 — Уровень кода (Code) - 4_TOBE_Code.puml
+*   C4 — Уровень кода (Code) - /C4/4_TOBE_Code.puml
 
         Пример диаграммы Code для сценария добавления нового устройства.
 
@@ -250,7 +250,7 @@ C4 - Уровень контекста (Context) - 1_Monolith_Context_Diagram.pu
 
 ## 4. ER-диаграмма на PlantUML
 
-ER-диаграмма - 5_TOBE_ER.puml
+ER-диаграмма - /C4/5_TOBE_ER.puml
 
 
 ----------
@@ -278,41 +278,43 @@ ER-диаграмма - 5_TOBE_ER.puml
 
 -   **POST /users**  — создать нового пользователя
     
-    -   **Запрос**:
-        
-	```json        
-	        `{
-	          "name": "John Doe",
-	          "email": "john.doe@example.com",
-	          "password": "securePassword123"
-	        }` 
-	 ``` 
-   
-	   -   **Ответы**:
-	        -   **201 Created**: Пользователь успешно создан.
-            
-           ```json
-           `{
-              "id": "123e4567-e89b-12d3-a456-426614174000",
-              "name": "John Doe",
-              "email": "john.doe@example.com"
-            }` 
-      ```   
-           -   **400 Bad Request**: Ошибка валидации данных.
+	-   **Запрос**:
+
+	```json
+	{
+		"name": "Daniil Kustov",
+		"email": "DaniilKustov@gmail.com",
+		"password": "password"
+	}
+	```    
+	-   **Ответы**:
+		-   **201 Created**: Пользователь успешно создан.
+ 
+		```json
+		{
+			"id": "123e4567-e89b-12d3-a456-426614174000",
+			"name": "Daniil Kustov",
+			"email": "DaniilKustov@gmail.com"
+		}
+		```
+
+   		-   **400 Bad Request**: Ошибка валидации данных.
+
+
 
 -   **GET /users/{userId}**  — получить данные пользователя по ID
     
-    -   **Ответы**:
-        -   **200 OK**: Успешное получение данных.
-            
-            ```json
-            `{
-              "id": "123e4567-e89b-12d3-a456-426614174000",
-              "name": "John Doe",
-              "email": "john.doe@example.com"
-            }` 
-            ```  
-        -   **404 Not Found**: Пользователь не найден.
+	-   **Ответы**:
+	        -   **200 OK**: Успешное получение данных.
+	            
+		```json
+		{
+			"id": "123e4567-e89b-12d3-a456-426614174000",
+			"name": "Daniil Kustov",
+		        "email": "DaniilKustov@gmail.com"
+		}
+		``` 
+		-   **404 Not Found**: Пользователь не найден.
 
 
 
@@ -322,42 +324,42 @@ ER-диаграмма - 5_TOBE_ER.puml
 
 -   **POST /devices**  — добавить новое устройство
     
-    -   **Запрос**:
+	-   **Запрос**:
         
-        ```json
-        `{
-          "serial_number": "ABC123456",
-          "type_id": "thermostat",
-          "house_id": "house123",
-          "status": "offline"
-        }` 
-	    ``` 
+	```json
+	{
+	       	  "serial_number": "ABC123456",
+	       	  "type_id": "thermostat",
+	       	  "house_id": "house123",
+	       	  "status": "offline"
+	}
+	``` 
 				
-    -   **Ответы**:
-        -   **201 Created**: Устройство успешно добавлено.
-            
-            ```json
-            `{
-              "id": "device123",
-              "serial_number": "ABC123456",
-              "status": "offline",
-              "type_id": "thermostat",
-              "house_id": "house123"
-            }` 
-            ```
+	-   **Ответы**:
+        	-   **201 Created**: Устройство успешно добавлено.
+
+		```json
+		{	           {
+		        "id": "device123",
+		        "serial_number": "ABC123456",
+		        "status": "offline",
+		        "type_id": "thermostat",
+			"house_id": "house123"
+		}
+		``` 
 -   **PATCH /devices/{deviceId}/status**  — обновить статус устройства (включено/выключено)
     
-    -   **Запрос**:
-        
-        ```json
-        `{
-          "status": "online"
-        }` 
-        ```
-    -   **Ответы**:
-        -   **200 OK**: Устройство успешно обновлено.
-        -   **404 Not Found**: Устройство не найдено.
-        -   **500 Internal Server Error**: Ошибка сервера.
+	-   **Запрос**:
+
+	```json
+	{
+		"status": "online"
+	}
+	``` 
+	-   **Ответы**:
+	        -   **200 OK**: Устройство успешно обновлено.
+	        -   **404 Not Found**: Устройство не найдено.
+   		-   **500 Internal Server Error**: Ошибка сервера.
 
 
 
@@ -370,18 +372,16 @@ ER-диаграмма - 5_TOBE_ER.puml
         
     -   **Payload**:
         
-        ```json
-        `{
-          "device_id": "device123",
-          "timestamp": "2023-01-01T12:00:00Z",
-          "temperature": 22.5
-        }` 
-        ```
+	```json
+	{
+		"device_id": "device123",
+		"timestamp": "2023-01-01T12:00:00Z",
+		"temperature": 22.5
+	}
+	``` 
     -   **Ответы**:
         
         -   При успешной обработке данных система отправляет уведомление об успешной записи данных для аналитики.
-
-
 
 
 
@@ -394,50 +394,51 @@ ER-диаграмма - 5_TOBE_ER.puml
     -   **Описание**: Добавить новое устройство.
     -   **Тело запроса**:
         
-       ```json
-        {
-          "serial_number": "ABC123456",
-          "type_id": "thermostat",
-          "house_id": "house123",
-          "status": "offline"
-        } 
-	   ```
-    -   **Ответы**:
+	```json
+	{
+		"serial_number": "ABC123456",
+		"type_id": "thermostat",
+		"house_id": "house123",
+		"status": "offline"
+	}
+	``` 
+ 
+-   **Ответы**:
         -   **201 Created**:
             
-        ```json
-            {
-              "id": "device123",
-              "serial_number": "ABC123456",
-              "status": "offline",
-              "type_id": "thermostat",
-              "house_id": "house123"
-            }  
-        ```
+	```json
+	{
+		"id": "device123",
+		"serial_number": "ABC123456",
+		"status": "offline",
+		"type_id": "thermostat",
+		"house_id": "house123"
+	}
+	```  
        
-        -   **400 Bad Request**: Ошибка валидации данных.
+  	-   **400 Bad Request**: Ошибка валидации данных.
 
 -   **Метод**:  `PATCH /devices/{deviceId}/status`
     
     -   **Описание**: Обновить статус устройства.
     -   **Тело запроса**:
         
-        ```json
-        {
-          "status": "online"
-        } 
-        ```        
+	```json
+	{
+		"status": "online"
+	}
+	```         
     -   **Ответы**:
         -   **200 OK**:
             
-        ```json
-        {
-          "id": "device123",
-          "status": "online"
-        }
-        ```     
+	```json
+	{
+ 		"id": "device123",
+		"status": "online"
+	}
+	```     
         
-        -   **404 Not Found**: Устройство не найдено.
+	-   **404 Not Found**: Устройство не найдено.
 
 
 

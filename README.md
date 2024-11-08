@@ -282,9 +282,9 @@ ER-диаграмма - 5_TOBE_ER.puml
 
 		```json
 			{
-			          "name": "John Doe",
-			          "email": "john.doe@example.com",
-			          "password": "securePassword123"
+			  "name": "John Doe",
+			  "email": "john.doe@example.com",
+			  "password": "securePassword123"
 		        }
 		```    
    
@@ -293,9 +293,9 @@ ER-диаграмма - 5_TOBE_ER.puml
 
 			```json
 				{
-			              "id": "123e4567-e89b-12d3-a456-426614174000",
-			              "name": "John Doe",
-			              "email": "john.doe@example.com"
+			          "id": "123e4567-e89b-12d3-a456-426614174000",
+			 	  "name": "John Doe",
+			          "email": "john.doe@example.com"
 		           	}
 		 	```
  
@@ -307,11 +307,11 @@ ER-диаграмма - 5_TOBE_ER.puml
         -   **200 OK**: Успешное получение данных.
             
             ```json
-	            {
-	           	"id": "123e4567-e89b-12d3-a456-426614174000",
-	           	"name": "John Doe",
-        		"email": "john.doe@example.com"
-	            }
+			{
+			  "id": "123e4567-e89b-12d3-a456-426614174000",
+			  "name": "John Doe",
+	        	  "email": "john.doe@example.com"
+		     	}
             ```  
         -   **404 Not Found**: Пользователь не найден.
 
@@ -327,10 +327,10 @@ ER-диаграмма - 5_TOBE_ER.puml
         
         ```json
 	        {
-	       		"serial_number": "ABC123456",
-	       		"type_id": "thermostat",
-	       		"house_id": "house123",
-	       		"status": "offline"
+	       	  "serial_number": "ABC123456",
+	       	  "type_id": "thermostat",
+	       	  "house_id": "house123",
+	       	  "status": "offline"
 	        }
         ``` 
 				
@@ -338,22 +338,22 @@ ER-диаграмма - 5_TOBE_ER.puml
         -   **201 Created**: Устройство успешно добавлено.
             
             ```json
-	            {
-	           	"id": "device123",
-	           	"serial_number": "ABC123456",
-	           	"status": "offline",
-	           	"type_id": "thermostat",
-	           	"house_id": "house123"
-	            } 
+	           {
+	             "id": "device123",
+	             "serial_number": "ABC123456",
+	             "status": "offline",
+	             "type_id": "thermostat",
+	             "house_id": "house123"
+	           } 
             ```
 -   **PATCH /devices/{deviceId}/status**  — обновить статус устройства (включено/выключено)
     
     -   **Запрос**:
         
 	        ```json
-		        {
-		  		"status": "online"
-		        }
+		    {
+		      "status": "online"
+		    }
 	        ```
     -   **Ответы**:
         -   **200 OK**: Устройство успешно обновлено.
@@ -373,9 +373,9 @@ ER-диаграмма - 5_TOBE_ER.puml
         
         ```json
 	        {
-	       		"device_id": "device123",
-	       		"timestamp": "2023-01-01T12:00:00Z",
-	       		"temperature": 22.5
+	       	  "device_id": "device123",
+	       	  "timestamp": "2023-01-01T12:00:00Z",
+	       	  "temperature": 22.5
 	        }
         ```
     -   **Ответы**:
@@ -395,10 +395,10 @@ ER-диаграмма - 5_TOBE_ER.puml
         
       	```json
 	        {
-			"serial_number": "ABC123456",
-			"type_id": "thermostat",
-			"house_id": "house123",
-			"status": "offline"
+		  "serial_number": "ABC123456",
+		  "type_id": "thermostat",
+		  "house_id": "house123",
+		  "status": "offline"
 	        } 
 	```
  
@@ -407,11 +407,11 @@ ER-диаграмма - 5_TOBE_ER.puml
             
 	```json
 	 	{
-			"id": "device123",
-		 	"serial_number": "ABC123456",
-			"status": "offline",
-			"type_id": "thermostat",
-			"house_id": "house123"
+		  "id": "device123",
+		  "serial_number": "ABC123456",
+		  "status": "offline",
+		  "type_id": "thermostat",
+		  "house_id": "house123"
 		}
  	```
        
@@ -424,7 +424,7 @@ ER-диаграмма - 5_TOBE_ER.puml
         
         ```json
 	        {
-	        	"status": "online"
+	          "status": "online"
 	        }
         ```        
     -   **Ответы**:
@@ -432,8 +432,8 @@ ER-диаграмма - 5_TOBE_ER.puml
             
 	```json
 		{
-			"id": "device123",
-			"status": "online"
+		  "id": "device123",
+		  "status": "online"
 		}
 	```     
         
